@@ -19,7 +19,7 @@ If you want to follow the video tutorial of the app you can use it at Youtube be
 
 We will use [https://start.spring.io](https://start.spring.io) . We are using maven as the build tool and 2.7.6 as version . We will use Java 17 as our Java version. Add web dependency and hit download.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671804920603/9e68acdb-b822-4073-9a44-67aa3a0f7572.png align="center")
+![image](https://cdn.hashnode.com/res/hashnode/image/upload/v1671804920603/9e68acdb-b822-4073-9a44-67aa3a0f7572.png)
 
 Open the project in your favourite IDE, We are using IntelliJ. Add the Hello endpoint and run the project.
 
@@ -54,7 +54,7 @@ Build the project using `mvn clean package` , and it will keep generate the war 
 
 Login to the azure portal and click on resource group, add a resource group.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671805568130/1223fbed-0e1b-41d7-920b-81c060e3abbf.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671805568130/1223fbed-0e1b-41d7-920b-81c060e3abbf.png )
 
 If you wish you can use Azure cli to do same . Use the following command.
 
@@ -74,7 +74,7 @@ az spring spring create   --resource-group  <YOUR_RESOURCE_GROUP_NAME>  --name <
 
 Now we can create a Spring App inside the service. Azure will deploy a sample Spring app. We will replace the app with thw one we have coded.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671806386691/a7ba4f73-3598-4d88-a028-a92d91c6f2d2.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671806386691/a7ba4f73-3598-4d88-a028-a92d91c6f2d2.png)
 
 Once deployment is complete it will have a app as shown in picture
 
@@ -95,11 +95,11 @@ Now let us go to the target folder where our jar file is created while building 
 az spring app deploy -n springdemo -g codingsaint -s codingsaintsvc --artifact-path springdemo-0.0.1-SNAPSHOT.jar
 ```
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671809116479/1e989fb7-f449-4125-af96-1bfaa0b6f7ef.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671809116479/1e989fb7-f449-4125-af96-1bfaa0b6f7ef.png)
 
 We can go to the assigned endpoint and check the deployed app. At present the URL (if assigned , you can see "Assign URL" link when you login to Azure and check your app) gets created as https://YOUR\_SERVICENAME-YOUR\_APPNAME.azuremicroservices.io .
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671809166025/41b0c323-dc7f-425f-90f1-0ce304d3cfba.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671809166025/41b0c323-dc7f-425f-90f1-0ce304d3cfba.png)
 
 ## Use GitHub Action to deploy on Azure
 
@@ -159,12 +159,12 @@ This will generate the JSON. Copy it.
 
 Log in to Github , and create a repository to push our code. Go to Setting Tab. Under Settings go to secret and Add AZURE\_CREDENTIAL inside it.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671809859340/5d88eb7c-dbd4-4715-aaf4-b795554433f1.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671809859340/5d88eb7c-dbd4-4715-aaf4-b795554433f1.png)
 
 Now we can save to JSON generated while running the command. Now we can commit our code to it. As the YAML for pipeline suggest it should trigger the build for you.
 
 You can verify the build under Action tab.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671810046139/00e10c7d-d4f3-4410-9205-6699b2fd310d.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671810046139/00e10c7d-d4f3-4410-9205-6699b2fd310d.png)
 
 If everything goes fine it will deploy the app at azure.
